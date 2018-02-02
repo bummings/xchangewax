@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>xchangewax</title>
+	
+
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="/stylesheets/custom.css">
+	<link rel='stylesheet' href='/stylesheets/main.css'>
+	<link href="https://fonts.googleapis.com/css?family=Questrial|Raleway|Arvo" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-custom">
+	<div class="container nav-custom">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">xchangewax</a>
+		</div>
+		<div class="collapse navbar-collapse"></div>
+			<div class="navbar-nav navbar-right">
+
+
+
+
+	<% if (!currentUser){ %>
+				<a class='nav-item nav-link' href='/digs'>Digs</a>
+				<a class='nav-item nav-link' href='/login'>Login</a>
+
+				<a class='nav-item nav-link' href='/register'>Sign up</a>
+	<% } else { %>
+				<a class='nav-item nav-link' href='/digs'>Digs</a>
+				<a class='nav-item nav-link'><strong><%= currentUser.username %></strong></a>
+				<a class='nav-item nav-link' href='/logout'>Logout</a>
+	<% } %>
+				
+			</div>
+		</div>
+	</nav>
+
+
+<div class="container">
+
+
+	<% if(nope && nope.length > 0) {  %>
+		<div class='alert alert-danger role='alert'>
+			<%= nope %>
+		</div>
+		<% } %>	
+		
+	
+	<% if (success && success.length > 0) { %>	
+		<div class='alert alert-success role='alert'>
+			<%= success %>
+		</div>
+		<% }  %>
+		
+
+</div>
+	
+
+
+
+
+

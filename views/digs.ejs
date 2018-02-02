@@ -1,0 +1,34 @@
+<% include partials/header %>
+
+<div class="container">
+
+	<header class="jumbotron">
+		<div class="container">
+			<h1>DIGZ</h1>
+			<p>cum get some bruh</p>
+			
+			<p><a class='btn btn-primary btn-large' href="/digs/new">Add one you fuckin freeloader</a></p>	
+		</div>
+	</header>
+
+	<div class="row text-center " style="display:flex; flex-wrap: wrap;">
+		<% digs.forEach(function(dig){ %>
+			<div class="col-md-3 col-sm-6 card"> 
+				<div class="card">
+					<img class="card-img-top" src="<%= dig.image %>" style="height: 200px; width: 200px;">	
+					<div class='caption'>
+						<h4><%= dig.name %> </h4>
+					</div>
+				</div>
+			</div>
+		<% }); %>	
+	</div>
+</div>
+ 
+
+
+<a href="/">get back bruh</a>
+	
+</div>
+
+<% include partials/footer %>

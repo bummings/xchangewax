@@ -1,0 +1,90 @@
+<% include ../partials/header %>
+
+<div class="show">
+
+<div class="show--information">
+
+	<div class="show--information__name">
+			<%= dig.name %>
+	</div>
+
+
+	
+
+</div>
+
+
+
+
+
+
+<div class="show--display">
+	
+	<div class="show--display__image">
+		<img class="img-responsive" src=" <%= dig.image %> " >	
+	</div>
+	
+	
+
+</div>
+
+
+	
+
+
+<div class="show--display__details">
+
+		<div class="show--details__description">
+			<p> <%= dig.description %> </p>	
+		</div>
+
+		<div class="show--display__submitted">
+			<p>Submitted by <%= dig.author.username %></p>	
+			<% if(currentUser && dig.author.id.equals(currentUser._id)) { %>			
+	
+		<a class='btn btn-small btn-link' href='/digs/<%= dig._id %>/edit'>Edit</a>
+		<form id='delete-form' action='/digs/<%= dig.id %>?_method=DELETE' method='POST'><button class='btn btn-link'>Delete</button></form>
+<% } %>
+		</div>
+
+
+
+
+<div class="show--comments">
+	
+	
+
+	<div class="show-comments__comments">
+
+<% dig.comments.forEach(function(comment){ %>
+ <%= comment.author.username %> - <%= comment.text %>
+
+
+		
+		
+<div class='show--comments__add'>
+	<a class='btn btn-success' href='/digs/<%=dig._id %>/comments/new'>Add new comment</a>
+</div>
+
+
+
+<% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
+
+<a class='btn btn-xs btn-link' href='/digs/<%= dig._id %>/comments/<%= comment._id %>/edit'>Edit dig</a>
+
+<form id='delete-form' action='/digs/<%= dig._id %>/comments/<%= comment._id %>?_method=DELETE' method='POST'>
+<input type='submit' class='btn btn-link' value='Delete dig'>
+</form>
+
+<% } %>
+							<% }) %>
+						</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<% include ../partials/footer %>
+
+</div>
+

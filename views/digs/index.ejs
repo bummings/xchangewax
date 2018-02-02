@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+<div class="index">
+
+		<div class="index--headline">
+			latest digs
+
+			<a class='btn btn-primary btn-large' href="/digs/new">Add a new dig!</a>	
+
+		</div>
+
+	<div class="index--container">
+	
+	<div class="index--digs">
+		
+		<% digs.forEach(function(dig){ %>
+		
+			<div>
+				<a class='index--digs__name' href='/digs/<%= dig._id %>'>
+				<img class='index--digs__picture' src="<%= dig.image %>"><br><%= dig.name %></a>
+			</div>			
+
+		<% }); %>	
+
+	</div>
+	
+</div>
+</div>
+
+<% include ../partials/footer %>

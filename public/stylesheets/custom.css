@@ -1,0 +1,282 @@
+body {
+	min-height: 100%;
+	background-color: #FAEBD7;
+}
+
+.landing--box {
+
+	display: flex;
+	height: 88vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	background-image: url('/img/records.jpg');
+}
+
+.landing--headline {
+	color: #FAEBD7;
+	text-align: center;
+	padding: 0rem 1.5rem;
+	background-color: rgba(34, 34, 34, 0.82);
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	display: block !important;
+}
+
+.landing--h1 {
+	font-size: 7rem;
+	letter-spacing: 0.72rem;
+	font-weight: 100;
+	text-align: center;
+	margin: 3rem;
+	padding: 0;
+	line-height: 6rem;
+	opacity: 1;
+	animation: fade 3s linear;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.landing--h2 {
+	font-size: 2.2rem;
+	font-weight: 100;
+	margin-bottom: 1rem;
+}
+
+.landing--h3 {
+	font-family: raleway;
+	font-size: 1.6rem;
+	letter-spacing: 0.15rem;
+}
+
+.landing--about {
+	margin: 5rem 10rem;
+}
+
+
+.navbar-brand {
+	font-family: Questrial;
+	font-size: 1.8rem;
+	color: #FAEBD7 !important; 
+
+}
+
+.nav-item, .nav-link {
+	font-family: Questrial;
+	font-size: 1.1rem;
+	color: #FAEBD7;
+}
+
+.bg-custom {
+	background-color: rgba(204, 60, 75, 0.9);
+}
+
+
+
+.index {
+	background-image: url('/img/records2.jpg');
+	background-color: black;
+	min-height: 100%;
+	height: 100vh;
+	width: 100vw;
+	background-size: cover;
+	color: #FAEBD7;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.index--container {
+	margin-top: 4rem;
+	background-color: rgba(0,0,0,0.8);
+	text-align: center;
+}
+
+.index--headline {
+	font-size: 10rem;
+	background-color: rgba(0,0,0,0.5);
+	margin: -1rem;
+}
+
+
+.index--digs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	align-content: flex-end;
+
+}
+
+.index--digs > div > a, a:hover {
+	color: rgba(204, 60, 75, 0.9);
+	text-decoration: none;
+}
+
+.index--digs__picture {
+	max-width: 200px;
+	max-width: 200px;
+	margin: 2rem;
+}
+
+.index--digs__name {
+	text-transform: uppercase;
+	color: #FAEBD7;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.show {
+	margin: 2rem;
+	background-color: #FAEBD7;
+}
+
+.show--h1 {
+	font-family: Arvo;
+	font-size: 10rem;
+}
+
+
+
+.show--information {
+	display: flex;
+	/*background-color: #888;*/
+	flex-wrap: no-wrap;
+	min-width: 100%;
+	line-height: 0.8px;
+}
+
+.show--information__name {
+	flex: 3;
+	align-self: center;
+	font-family: Arvo;
+	text-transform: uppercase;
+	font-size: 5rem;
+	margin: 2rem 0 5rem 0;
+}
+
+
+
+.show--information__address {
+	flex: 1;
+	line-height: 1.4rem;
+	text-transform: uppercase;
+	margin-top: -60px;
+	margin-left: 7px;
+}
+
+.show--information__phone {
+	line-height: 1.4rem;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	margin-left: 7px;
+}
+
+
+
+.show--display {
+	display: flex;
+	flex-wrap: no-wrap;
+	min-width: 100%;
+}
+
+.show--display__image > img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.show--display__details {
+	flex: 1;
+	margin: 0.3rem;
+	text-align: left;
+	font-size: 1.4rem;
+	margin: 5rem;
+}
+
+.show--display__submitted {
+	font-size: 1rem;
+	font-style: italic;
+	text-align: right;
+}
+
+
+
+.show--comments__comments {
+	font-size: 0.9rem;
+}
+
+.show--comments__header {
+	font-weight: bold;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+
+.login {
+	background-image: url('/img/turntable3.jpg');
+	min-height: 100%;
+	height: 100vh;
+	width: 100vw;
+	background-size: cover;
+}
+
+.login--login > h1 {
+	font-size: 8rem;
+	color: #333
+	padding: 30px;
+	margin-left: 2rem;
+}
+
+.login--form {
+	font-size: 2.5rem;
+	margin-left: 2rem;
+	margin-top: 2rem;
+}
+
+.register {
+	background-image: url('/img/turntable.jpg');
+	min-height: 100%;
+	height: 100vh;
+	width: 100vw;
+	background-size: cover;
+	color: #FAEBD7;
+}
+
+.register-register {
+	font-size: 8rem;
+}
+
+.register--form {
+	font-size: 2.5rem;
+	margin-left: 2rem;
+	margin-top: 2rem;
+}
+
+.special {
+	font-style: italic;
+	font-weight: bold;
+	color: #FAEBD7;
+	background-color: rgba(204, 60, 75, 0.9)
+}
+
+
+
+
+
+
+
+
+
+
+
+
